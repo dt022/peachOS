@@ -1,5 +1,5 @@
 # PeachOS implementation
-this is a OS with kernel and custom bootloader created when learning OS & kernel development
+this is a very basic OS with kernel and custom bootloader created for learning OS & kernel development
 
 ## Emulating bootloader
 ```
@@ -8,4 +8,4 @@ qemu-system-x86_64 -hda ./boot.bin
 ```
 
 ## Reference
-https://www.udemy.com/course/developing-a-multithreaded-kernel-from-scratch
+[Developing a multithreaded kernel from scratch](https://www.udemy.com/course/developing-a-multithreaded-kernel-from-scratch)
