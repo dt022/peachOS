@@ -1,9 +1,11 @@
 BOOTLOADER = boot.bin
 
 all:
-	nasm -f bin boot.asm -o $(BOOTLOADER)
-	dd if=./message.txt >> $(BOOTLOADER)
-	dd if=/dev/zero bs=512 count=1 >> $(BOOTLOADER)
+	nasm -f bin ./src/boot/boot.asm -o ./bin/$(BOOTLOADER)
 
 qemu:
-	qemu-system-x86_64 -hda $(BOOTLOADER)
+	nasm -f bin ./src/boot/boot.asm -o ./bin/$(BOOTLOADER)
+	qemu-system-x86_64 -hda ./bin/$(BOOTLOADER)
+
+clean:
+	rm -rf ./bin/$(BOOTLOADER)
