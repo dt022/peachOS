@@ -1,7 +1,7 @@
 # PeachOS implementation
 this is a very basic OS with kernel and custom bootloader created for learning OS & kernel development
 
-## Running it
+## Build
 `make`
 
 Or if you want to emulate
