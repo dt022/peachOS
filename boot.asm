@@ -39,6 +39,7 @@ error:
     call print
     jmp $
 
+; 8086 assembly print function
 print:
     mov bx, 0
 .loop:
@@ -54,7 +55,7 @@ print_char:
     mov ah, 0xe
     int 0x10
     ret
-
+    
 error_message: db 'Failed to load sector', 0
 
 times 510-($-$$) db 0
